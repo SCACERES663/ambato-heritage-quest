@@ -7,11 +7,6 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  vite: {
-    // Prefija todos los assets del build con /museoambato/ para que funcionen
-    // cuando el portal Next.js los reescribe vía /museoambato/:path*
-    base: "/museoambato/",
-  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
