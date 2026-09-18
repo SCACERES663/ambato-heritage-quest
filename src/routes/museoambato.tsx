@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MuseumPage } from "../components/MuseumPage";
 
-export const Route = createFileRoute("/")({
+// Esta ruta permite que el portal multipaginas.com.ar/museoambato
+// sirva la misma página sin depender de basepath ni redirects.
+export const Route = createFileRoute("/museoambato")({
   head: () => ({
     meta: [
       { title: "Museo Arqueológico Argentino Ambato" },
