@@ -13,6 +13,13 @@ import {
 import museumAsset from "../assets/museo-ambato-780x470.png.asset.json";
 import collectionAsset from "../assets/hotel_ambato.png.asset.json";
 import robberyAsset from "../assets/coleccion-rosso-robada-del-museo-ambato-2279663.png.asset.json";
+import museumPng from "../assets/museo-ambato-780x470.png";
+import collectionPng from "../assets/hotel_ambato.png";
+import robberyPng from "../assets/coleccion-rosso-robada-del-museo-ambato-2279663.png";
+
+const museumImage = museumPng || museumAsset.url;
+const collectionImage = collectionPng || collectionAsset.url;
+const robberyImage = robberyPng || robberyAsset.url;
 
 const mapsUrl =
   "https://www.google.com/maps/search/?api=1&query=Cta.%20del%20Lago%201469%2C%20X5172%20La%20Falda%2C%20C%C3%B3rdoba";
@@ -90,7 +97,7 @@ function Index() {
 
       <section id="inicio" className="hero" aria-labelledby="hero-title">
         <img
-          src={museumAsset.url}
+          src={museumImage}
           alt="Casona histórica que alberga el Museo Arqueológico Argentino Ambato en La Falda"
           className="hero-image"
         />
@@ -157,7 +164,7 @@ function Index() {
             </article>
             <figure className="collection-figure">
               <img
-                src={collectionAsset.url}
+                src={collectionImage}
                 alt="Vasijas arqueológicas de la colección Ambato exhibidas en una vitrina"
                 loading="lazy"
               />
@@ -247,7 +254,7 @@ function Index() {
           <div className="robbery-lead">
             <figure>
               <img
-                src={robberyAsset.url}
+                src={robberyImage}
                 alt="Policía junto a piezas arqueológicas recuperadas de la colección Ambato"
                 loading="lazy"
               />
